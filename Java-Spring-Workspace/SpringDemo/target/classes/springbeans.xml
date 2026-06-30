@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+    <!-- Department Bean -->
+    <bean id="dept" class="spring.com.Department"/>
+
+    <!-- Student Bean -->
+    <bean id="s" class="spring.com.Student">
+
+        <property name="studentId" value="123"/>
+        <property name="name" value="Ram"/>
+        <property name="city" value="Pune"/>
+        <property name="email" value="ram@gmail.com"/>
+
+        <!-- Dependency Injection -->
+        <property name="department" ref="dept"/>
+
+    </bean>
+
+</beans>
